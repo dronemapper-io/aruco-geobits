@@ -1,0 +1,22 @@
+%YAML:1.0
+nmarkers: 16
+adaptiveThreshWinSizeMin: 3
+adaptiveThreshWinSizeMax: 4
+adaptiveThreshWinSizeStep: 1
+adaptiveThreshConstant: 7
+minMarkerPerimeterRate: 0.004
+maxMarkerPerimeterRate: 15.0
+polygonalApproxAccuracyRate: 0.16
+minCornerDistance: 1.0
+minDistanceToBorder: 3
+minMarkerDistance: 10.0
+doCornerRefinement: 1
+cornerRefinementWinSize: 5
+cornerRefinementMaxIterations: 1
+cornerRefinementMinAccuracy: 0.1
+markerBorderBits: 1
+perspectiveRemovePixelPerCell: 1
+perspectiveRemoveIgnoredMarginPerCell: 0.26
+maxErroneousBitsInBorderRate: 0.04
+errorCorrectionRate: 0.6
+minOtsuStdDev: 5.0

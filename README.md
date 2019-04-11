@@ -7,9 +7,34 @@ TAGS: openCV, ArUco, QR Code, GCP, Drones, Ground Control Points, DroneMapper, M
 
 #### Overview:
 
+We've developed an aerial ground control point target system similar to a QR code. 
+Our GCP targets are digitally encoded fiducial markers with computer vision software 
+functionality to enhance workflows and provide the highest accuracy possible for 
+photogrammetry missions.
+
+![](img/readme_geobits_16.png)
+
+![](img/readme_overview.png)
+
 #### Build:
 
+Download and build opencv3 and opencv_contrib.
+
+Next, build geoBits with the following commands:
+
+```$ mkdir build ; cd build```
+
+```$ export OpenCV_DIR=/opt/OPENCV3_DIR/; cmake ...```
+
+```$ make```
+
 #### Use:
+
+```
+$ ./build/drnmppr-detect-marker -d=0 -i=img/DJI_0040.JPG -l=0.161 -dp=detector_params.yml
+DM-0 img/DJI_0040.JPG 1644.65 2391.85
+DM-1 img/DJI_0040.JPG 2049.15 1130.93
+```
 
 #### Notes:
 
@@ -29,6 +54,10 @@ If you use geoBits, please cite it as:
 JP Stoermer & Pierre Stoermer @ https://dronemapper.com
 
 #### Screenshots:
+![](img/readme_detected.png)
+
+Optional camera/sensor calibration:
+![](img/dji-phantom3-calib-result.PNG)
 
 #### Integrations & Uses:
 
