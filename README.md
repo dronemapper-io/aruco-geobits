@@ -38,6 +38,8 @@ DM-1 img/DJI_0040.JPG 2049.15 1130.93
 
 #### Notes:
 
+Printable 10000x10000 pixel markers are in the `markers` directory.
+
 #### Cite Us:
 
 If you use geoBits, please cite it as:

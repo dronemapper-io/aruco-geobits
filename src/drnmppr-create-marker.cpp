@@ -6,7 +6,7 @@
 using namespace cv;
 
 namespace {
-const char* about = "Create an ArUco marker image";
+const char* about = "DroneMapper.com geoBit GCP Target Detector";
 const char* keys  =
         "{@outfile |<none> | Output image }"
         "{d        |       | dictionary: DICT_4X4_50=0, DICT_4X4_100=1, DICT_4X4_250=2,"
@@ -42,17 +42,16 @@ int main(int argc, char *argv[]) {
         return 0;
     }
 
-    //Ptr<aruco::Dictionary> dictionary =
-        //aruco::getPredefinedDictionary(aruco::PREDEFINED_DICTIONARY_NAME(dictionaryId));
+    //Ptr<aruco::Dictionary> dictionary = aruco::getPredefinedDictionary(aruco::PREDEFINED_DICTIONARY_NAME(dictionaryId));
 
-	cv::FileStorage fsr("dic_save.yml", cv::FileStorage::READ);
+	cv::FileStorage fsr("detector_dictionary.yml", cv::FileStorage::READ);
 	int mSize, mCBits;
 	cv::Mat bits;
 	fsr["MarkerSize"] >> mSize;
 	fsr["maxCorrectionBits"] >> mCBits;
 	fsr["ByteList"] >> bits;
 	fsr.release();
-	Ptr<aruco::Dictionary> &dictionary = makePtr<cv::aruco::Dictionary>(bits, mSize, mCBits);
+	Ptr<aruco::Dictionary> dictionary = makePtr<cv::aruco::Dictionary>(bits, mSize, mCBits);
 
     Mat markerImg;
     aruco::drawMarker(dictionary, markerId, markerSize, markerImg, borderBits);

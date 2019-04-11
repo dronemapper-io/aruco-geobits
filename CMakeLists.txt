@@ -19,3 +19,12 @@ set(files "${SOURCES}" "${HEADERS}")
 
 add_executable(drnmppr-detect-marker src/drnmppr-detect-marker.cpp)
 target_link_libraries(drnmppr-detect-marker ${OpenCV_LIBS})
+
+add_executable(drnmppr-create-dictionary src/drnmppr-create-dictionary.cpp)
+target_link_libraries(drnmppr-create-dictionary ${OpenCV_LIBS})
+
+add_executable(drnmppr-create-marker src/drnmppr-create-marker.cpp)
+target_link_libraries(drnmppr-create-marker ${OpenCV_LIBS})
+
+add_executable(drnmppr-calibrate-camera src/drnmppr-calibrate-camera.cpp)
+target_link_libraries(drnmppr-calibrate-camera ${OpenCV_LIBS})

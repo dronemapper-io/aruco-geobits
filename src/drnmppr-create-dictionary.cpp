@@ -5,7 +5,7 @@
 using namespace cv;
 
 namespace {
-	const char* about = "Create an ArUco marker image";
+	const char* about = "DroneMapper.com geoBit GCP Target Detector";
 	const char* keys =
 		"{@outfile |<none> | Output image }"
 		"{d        |       | dictionary: DICT_4X4_50=0, DICT_4X4_100=1, DICT_4X4_250=2,"
@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
 	int number = 16, dimension = 3;
 	cv::aruco::Dictionary dictionary = cv::aruco::generateCustomDictionary(number, dimension);
 	cv::Mat store = dictionary.bytesList;
-	cv::FileStorage fs("dic_save.yml", cv::FileStorage::WRITE);
+	cv::FileStorage fs("detector_dictionary.yml", cv::FileStorage::WRITE);
 	fs << "MarkerSize" << dictionary.markerSize;
 	fs << "MaxCorrectionBits" << dictionary.maxCorrectionBits;
 	fs << "ByteList" << dictionary.bytesList;

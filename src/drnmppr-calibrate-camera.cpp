@@ -14,7 +14,7 @@ using namespace cv;
 
 namespace {
 	const char* about =
-		"POC POC\n";
+		"DroneMapper.com geoBit GCP Target Detector";
 	const char* keys =
 		"{w        |       | Number of squares in X direction }"
 		"{h        |       | Number of squares in Y direction }"
@@ -53,7 +53,7 @@ static bool readDetectorParameters(string filename, Ptr<aruco::DetectorParameter
 	fs["minCornerDistanceRate"] >> params->minCornerDistanceRate;
 	fs["minDistanceToBorder"] >> params->minDistanceToBorder;
 	fs["minMarkerDistanceRate"] >> params->minMarkerDistanceRate;
-	fs["doCornerRefinement"] >> params->doCornerRefinement;
+	fs["doCornerRefinement"] >> params->cornerRefinementMethod;
 	fs["cornerRefinementWinSize"] >> params->cornerRefinementWinSize;
 	fs["cornerRefinementMaxIterations"] >> params->cornerRefinementMaxIterations;
 	fs["cornerRefinementMinAccuracy"] >> params->cornerRefinementMinAccuracy;
