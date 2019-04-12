@@ -18,7 +18,6 @@ namespace {
 		"{si       | false | show generated image }";
 }
 
-
 int main(int argc, char *argv[]) {
 	int number = 16, dimension = 3;
 	cv::aruco::Dictionary dictionary = cv::aruco::generateCustomDictionary(number, dimension);

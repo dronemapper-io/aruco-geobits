@@ -162,6 +162,7 @@ int main(int argc, char *argv[]) {
 	// create charuco board object
 	Ptr<aruco::CharucoBoard> charucoboard = aruco::CharucoBoard::create(squaresX, squaresY, squareLength, markerLength, dictionary);
 	Ptr<aruco::Board> board = charucoboard.staticCast<aruco::Board>();
+
 	// collect data from each frame
 	vector< vector< vector< Point2f > > > allCorners;
 	vector< vector< int > > allIds;
@@ -320,7 +321,6 @@ int main(int argc, char *argv[]) {
 			imwrite("drnmppr_calib.jpg", imageCopy);
 		}
 	}
-
 	return 0;
 }
 

@@ -19,7 +19,6 @@ const char* keys  =
         "{si       | false | show generated image }";
 }
 
-
 int main(int argc, char *argv[]) {
     CommandLineParser parser(argc, argv, keys);
     parser.about(about);

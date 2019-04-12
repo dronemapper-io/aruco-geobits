@@ -151,7 +151,6 @@ int main(int argc, char *argv[]) {
 		cout << "DM-" << i << " " << imageName << " " << center.x << " " << center.y << "\n";
 	}
 
-
 	// pose
 	if (estimatePose && ids.size() > 0)
 		aruco::estimatePoseSingleMarkers(corners, markerLength, camMatrix, distCoeffs, rvecs, tvecs);
