@@ -1,5 +1,5 @@
 # geoBits: ArUco Ground Control Point (GCP) Targets and Detection for Aerial Imagery (UAV/MAV/SAT).
-https://geobits.io 
+http://geobits.io 
 
 https://dronemapper.com
 
